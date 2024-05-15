@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Evaluation</title>
+<script>
+  function evaluateForm() {
+    // Retrieve the form element
+    var form = document.getElementById("myForm");
+    
+    // Retrieve form elements
+    var firstName = form.elements["first_name"].value;
+    var lastName = form.elements["last_name"].value;
+    var email = form.elements["email"].value;
+    
+    // Perform validation (for simplicity, let's just check if fields are not empty)
+    if (firstName === "" || lastName === "" || email === "") {
+      alert("Please fill out all fields");
+      return false; // Prevent form submission
+    }
+    
+    // If all fields are filled, allow form submission
+    return true;
+  }
+</script>
+</head>
+<body>
+
+<form id="myForm" action="/submit_form" method="post" onsubmit="return evaluateForm()">
+  <input type="text" name="first_name" placeholder="First Name"><br>
+  <input type="text" name="last_name" placeholder="Last Name"><br>
+  <input type="email" name="email" placeholder="Email"><br>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

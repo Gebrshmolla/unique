@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js.js"></script>
+    <style>
+        .form{
+            margin:0px;
+            padding:0px;
+            background-color: rgb(126, 82, 134);
+            display: flex;
+            justify-content: space-around;
+        }
+        #fill{
+            background-color:white;
+            width:20px;
+        }
+input{
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form id="form" action="" onsubmit="evalute()">
+      name:
+      <input type="text" placeholder="user name" id="fname"><br>
+      Email<input type="email" name="" id="user-email" placeholder="Email" ><br>
+      Password<input type="password" name="" id="password"><br>
+      gender
+    <input type="radio" name="gender" id="female">Female
+    <input type="radio" name="gender" id="male">male <br>
+    <select name="department" id="" class="department">
+        <option value="software" class="soft">software</option>
+        <option value="computer" class="cs">computer</option>
+        <option value="information" class="it">information tecnology</option>
+    </select><br>
+    <textarea name="text" id="" cols="30" rows="10"  id></textarea><br>
+    <input type="submit" id="submit" value="submit">
+    
+</form>
+<div id="fill"></div>
+    </div>
+</body>
+</html>

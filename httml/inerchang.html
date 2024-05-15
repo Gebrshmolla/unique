@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manipulating HTML with JavaScript</title>
+<style>
+  /* Example CSS styling */
+  .red-text {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="addElement()">Add Element</button>
+<button onclick="addChild()">Add Child Element</button>
+<button onclick="changeClass()">Change Class</button>
+<button onclick="changeId()">Change ID</button>
+
+<div id="container">
+  Initial content
+</div>
+
+<script>
+function addElement() {
+  // Create a new div element
+  var newDiv = document.createElement("div");
+  
+  // Add text content
+  newDiv.textContent = "New Element";
+  
+  // Append the new element to the container
+  document.getElementById("container").appendChild(newDiv);
+}
+
+function addChild() {
+  // Create a new span element
+  var newSpan = document.createElement("span");
+  
+  // Add text content
+  newSpan.textContent = "Child Element";
+  
+  // Append the new span element to the container
+  document.getElementById("container").appendChild(newSpan);
+}
+
+function changeClass() {
+  // Get the container element
+  var container = document.getElementById("container");
+  
+  // Add or remove the "red-text" class
+  container.classList.toggle("red-text");
+}
+
+function changeId() {
+  // Get the container element
+  var container = document.getElementById("container");
+  
+  // Change the ID
+  container.id = "newId";
+}
+</script>
+
+</body>
+</html>
